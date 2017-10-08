@@ -1,4 +1,4 @@
-#! usr/bin/env node
+#!/usr/bin/env node
 
 // Requiring needed packages & files
 const program = require('commander')
