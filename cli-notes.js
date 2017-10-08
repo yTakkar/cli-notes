@@ -19,7 +19,7 @@ program
 
 // List all notes
 program
-  .command('getNotesList')
+  .command('listNotes')
   .alias('l')
   .description('List Notes!!')
   .action(() => listNotes() )

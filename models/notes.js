@@ -27,15 +27,18 @@ const listNotes = () => {
   notes.find({}, (err, notes) => {
     if (err) hl.error(err.errmsg)
     console.log(notes)
-    hl.success(`${notes.length} notes!!`)
+    hl.success(`${notes.length} notes found!!`)
     db.disconnect()
   })
 }
 
 const addNote = note => {
   notes.create(note, err => {
-    let { code, errmsg } = err
-    code == 11000 ? hl.error('Title already exists!!') : err ? hl.error(errmsg) : hl.rainbow('Note Added!!')
+    if (err) {
+      let { code, errmsg } = err
+      code == 11000 ? hl.error('Title already exists!!') : err ? hl.error(errmsg) : null
+    }
+    hl.rainbow('Note Added!!')
     db.disconnect()
   })
 }
@@ -52,14 +55,14 @@ const getNote = value => {
 
 const deleteNote = title => {
   notes.findOneAndRemove({ title }, err => {
-    err ? hl.error(err.errmsg) : hl.success('Note Deleted!!')
+    err ? hl.error(err.errmsg) : hl.rainbow('Note Deleted!!')
     db.disconnect()
   })
 }
 
 const updateNote = (title, upt) => {
   notes.findOneAndUpdate({ title }, upt, err => {
-    err ? hl.error(err.errmsg) : hl.success('Note updated!!')
+    err ? hl.error(err.errmsg) : hl.rainbow('Note updated!!')
     db.disconnect()
   })
 }
