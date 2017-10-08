@@ -1,6 +1,6 @@
 # CLI-Notes-App
 
-A simple notes-app for notes management!!
+A simple notes-app in CLI for notes management with mongodb!! 💻💻
 
 First install
 ```cmd
