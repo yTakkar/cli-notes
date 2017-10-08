@@ -27,5 +27,5 @@
     "eslint": "^4.8.0"
   },
   "preferGlobal": true,
-  "bin": "./cli.js"
+  "bin": "./cli-notes.js"
 }
