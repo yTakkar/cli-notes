@@ -1,5 +1,5 @@
 {
-  "name": "notes-cli",
+  "name": "cli-notes",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yTakkar/Notes-CLI.git"
+    "url": "git+https://github.com/yTakkar/CLI-Notes.git"
   },
   "author": "yTakkar",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yTakkar/Notes-CLI/issues"
+    "url": "https://github.com/yTakkar/CLI-Notes/issues"
   },
-  "homepage": "https://github.com/yTakkar/Notes-CLI#readme",
+  "homepage": "https://github.com/yTakkar/CLI-Notes#readme",
   "dependencies": {
     "commander": "^2.11.0",
     "handy-log": "^1.0.3",
@@ -27,5 +27,5 @@
     "eslint": "^4.8.0"
   },
   "preferGlobal": true,
-  "bin": "./notes-cli.js"
+  "bin": "./cli.js"
 }
