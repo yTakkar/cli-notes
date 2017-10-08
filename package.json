@@ -1,0 +1,31 @@
+{
+  "name": "notes-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yTakkar/Notes-CLI.git"
+  },
+  "author": "yTakkar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yTakkar/Notes-CLI/issues"
+  },
+  "homepage": "https://github.com/yTakkar/Notes-CLI#readme",
+  "dependencies": {
+    "commander": "^2.11.0",
+    "handy-log": "^1.0.3",
+    "handy-timeago": "^1.0.1",
+    "inquirer": "^3.3.0",
+    "mongoose": "4.10.8"
+  },
+  "devDependencies": {
+    "eslint": "^4.8.0"
+  },
+  "preferGlobal": true,
+  "bin": "./notes-cli.js"
+}
