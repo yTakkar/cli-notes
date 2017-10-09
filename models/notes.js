@@ -45,7 +45,7 @@ const addNote = note => {
 
 const getNote = value => {
   let iValue = value.toLowerCase()
-  let find = { $or: [{ title: iValue }, { content: iValue }] }
+  let find = { title: iValue }
   notes.find(find, (err, [{ title, content, created }]) => {
     if (err) hl.error(err.errmsg)
     log(title, content, created)
@@ -60,8 +60,8 @@ const deleteNote = title => {
   })
 }
 
-const updateNote = (title, upt) => {
-  notes.findOneAndUpdate({ title }, upt, err => {
+const updateNote = ({ search, title, content }) => {
+  notes.findOneAndUpdate({ title: search }, { title, content }, err => {
     err ? hl.error(err.errmsg) : hl.rainbow('Note updated!!')
     db.disconnect()
   })

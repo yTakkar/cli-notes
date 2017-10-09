@@ -13,11 +13,11 @@ Usage: cli-notes [options] [command]
 
 Commands: 
 
-    listNotes|l                       List Notes!!
-    addNote|a                         Add a note!!
-    getNote|g    <title|content>      Get note!!
-    deleteNote|d <title>              Delete note!!
-    updateNote|u <title>              Update note!!
+    listNotes|l    List Notes!!
+    addNote|a      Add a note!!
+    getNote|g      Get note!!
+    deleteNote|d   Delete note!!
+    updateNote|u   Update note!!
 
 Options:
 

@@ -10,7 +10,12 @@ const {
   deleteNote,
   updateNote,
 } = require('./models/notes')
-const questions = require('./models/questions')
+const {
+  bQ,
+  getQ,
+  dltQ,
+  updQ,
+} = require('./models/questions')
 
 // Program Basics
 program
@@ -30,33 +35,39 @@ program
   .alias('a')
   .description('Add a note!!')
   .action(async () => {
-    let answer = await prompt(questions)
+    let answer = await prompt(bQ)
     let newNote = { ...answer, created: new Date().getTime() }
     addNote(newNote)
   })
 
 // Get a note
 program
-  .command('getNote <name>')
+  .command('getNote')
   .alias('g')
   .description('Get note!!')
-  .action(name => getNote(name) )
+  .action(async () => {
+    let { value } = await prompt(getQ)
+    getNote(value)
+  })
 
 // Delete a note
 program
-  .command('deleteNote <title>')
+  .command('deleteNote')
   .alias('d')
   .description('Delete note!!')
-  .action(title => deleteNote(title) )
+  .action(async () => {
+    let { title } = await prompt(dltQ)
+    deleteNote(title)
+  })
 
 // Update a note
 program
-  .command('updateNote <title>')
+  .command('updateNote')
   .alias('u')
   .description('Update note!!')
-  .action(async title => {
-    let answer = await prompt(questions)
-    updateNote(title, answer)
+  .action(async () => {
+    let answer = await prompt(updQ)
+    updateNote(answer)
   })
 
 program.parse(process.argv)
