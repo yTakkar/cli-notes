@@ -1,7 +1,7 @@
 {
   "name": "cli-notes",
-  "version": "1.0.4",
-  "description": "",
+  "version": "1.0.3",
+  "description": "A simple notes-app in CLI for notes management with mongodb!!",
   "main": "",
   "scripts": {
     "start": "nodemon app.js"
