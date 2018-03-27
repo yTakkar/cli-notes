@@ -29,7 +29,16 @@ const updQ = [
     name: 'search',
     message: 'Enter title of the note to update..'
   },
-  ...bQ,
+  {
+    type: 'input',
+    name: 'title',
+    message: 'Enter updated title..'
+  },
+  {
+    type: 'input',
+    name: 'content',
+    message: 'Enter updated content..'
+  }
 ]
 
 module.exports = {

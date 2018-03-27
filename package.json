@@ -4,7 +4,7 @@
   "description": "A simple notes-app in CLI for notes management with mongodb!!",
   "main": "",
   "scripts": {
-    "start": "nodemon app.js"
+
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/yTakkar/CLI-Notes#readme",
   "dependencies": {
+    "bluebird": "^3.5.1",
     "commander": "^2.11.0",
     "handy-log": "^1.0.3",
     "handy-timeago": "^1.0.1",

@@ -36,8 +36,7 @@ program
   .description('Add a note!!')
   .action(async () => {
     let answer = await prompt(bQ)
-    let newNote = { ...answer, created: new Date().getTime() }
-    addNote(newNote)
+    addNote({ ...answer, created: new Date().getTime() })
   })
 
 // Get a note
