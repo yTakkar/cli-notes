@@ -54,13 +54,13 @@ const addNote = note => {
 }
 
 const getNote = value => {
-  let iValue = value.toLowerCase()
-  let find = { title: iValue }
-  notes.find(find, (err, [{ title, content, created }]) => {
-    if (err) error(err.errmsg)
-    log(title, content, created)
-    exit()
-  })
+  notes.find(
+    { title: value.toLowerCase() },
+    (err, [{ title, content, created }]) => {
+      if (err) error(err.errmsg)
+      log(title, content, created)
+      exit()
+    })
 }
 
 const deleteNote = title => {
